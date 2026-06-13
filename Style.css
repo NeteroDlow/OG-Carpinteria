@@ -176,3 +176,9 @@ footer {
   opacity: 4;
   position: relative;
 }
+
+/* Ajuste automatico del tamaño de las imagenes para ajustar se a las pantallas */
+.productos {
+  max-width: 100%;
+  height: auto;
+}
