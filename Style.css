@@ -1,0 +1,178 @@
+/* estilos.css */
+
+/* Base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Encabezado con logo */
+header nav {
+  background-color: #c78b5a;
+  padding: 1rem;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.title-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.title-text p {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+}
+
+.title-text li {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+}
+
+/* Secciones */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  justify-content: center;
+  color: #8B5E3C;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  line-height: 1.5;
+}
+
+/* Servicios */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.services div {
+  flex: 1 1 250px;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contenedor flotante */
+.whatsapp-float-container {
+  position: fixed;   /* siempre visible */
+  bottom: 20px;      /* distancia desde el borde inferior */
+  right: 20px;       /* distancia desde el borde derecho */
+  display: flex;
+  flex-direction: column; /* apila verticalmente */
+  gap: 10px;         /* espacio entre botones */
+  z-index: 9999;     /* asegura que quede por encima de todo */
+}
+
+/* Botones flotantes */
+.whatsapp-float {
+  background: #25D366;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre ícono y texto */
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+}
+
+/* Botones WhatsApp */
+.whatsapp-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.whatsapp-buttons a {
+  background: #25D366;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-buttons a:hover {
+  background: #05411d;
+}
+
+/* Footer */
+footer {
+  background-color: #c78b5a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0 0 1rem 0;
+  }
+
+  .services div {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Efecto de Carrusel */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* transición suave */
+}
+
+.carousel img.active {
+  opacity: 4;
+  position: relative;
+}
